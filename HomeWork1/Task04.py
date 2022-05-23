@@ -1,20 +1,24 @@
 # Подсчитать сумму цифр в вещественном числе
 
 def sumDigits(f):
+    if f == 0:
+        return 0
+    if f < 0:
+        f = -f
     stroka = str(f)
     spisok = stroka.split(".")
-    celayaChast = int(spisok[0])
-    drobnayaChast = int(spisok[1])
+    whole_part = int(spisok[0])
+    fraction = int(spisok[1])
     sum = 0
-    while celayaChast > 0:
-        sum = sum + (celayaChast % 10)
-        celayaChast = int(celayaChast / 10)
+    while whole_part > 0:
+        sum = sum + (whole_part % 10)
+        whole_part = whole_part // 10
 
-    while drobnayaChast > 0:
-        sum = sum + (drobnayaChast % 10)
-        drobnayaChast = int(drobnayaChast / 10)
+    while fraction > 0:
+        sum = sum + (fraction % 10)
+        fraction = fraction // 10
     
     return sum
 
-summa = sumDigits(14523.43532656)
+summa = sumDigits(-14523.43532656)
 print(summa)

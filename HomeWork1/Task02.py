@@ -1,12 +1,12 @@
 # Пользователь задает две строки. Определить количество вхождений
 # одной строки в другой
 
-def countRepeat(strokaMalaya, strokaBolshaya):
-    lenMin = len(strokaMalaya)
-    limit = len(strokaBolshaya) - lenMin + 1
+def countRepeat(value, source):
+    lenMin = len(value)
+    limit = len(source) - lenMin + 1
     count = 0
     for i in range(0, limit):
-        if strokaBolshaya[i:i+lenMin] == strokaMalaya:
+        if source[i:i+lenMin] == value:
             count += 1
     return count
 
