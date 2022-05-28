@@ -2,9 +2,8 @@
 
 from itertools import product
 
-
 def find_LCM(first_num, second_num):    
-    return int((first_num * second_num) / find_GCD(first_num, second_num))
+    return first_num * second_num // find_GCD(first_num, second_num)
 
 def find_GCD(num_first, num_second):
     num_first, num_second = max(num_first, num_second), min(num_first, num_second)
