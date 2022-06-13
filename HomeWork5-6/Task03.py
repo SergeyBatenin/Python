@@ -1,21 +1,44 @@
 # Создайте программу для игры в "Крестики-нолики"
 
 
-def print_field(maxtrix):
-    print("Field")
-    print("---------------")
+# def print_field(maxtrix):
+#     print("Field")
+#     print("---------------")
+#     for i in range(3):
+#         field = []
+#         for j in range(3):
+#             value = maxtrix[i][j]
+#             if value == 0:
+#                 field.append("-")
+#             elif value == 1:
+#                 field.append("X")
+#             else:
+#                 field.append("O")
+#         print(field)
+#     print("---------------")
+from copy import deepcopy
+
+
+def print_field(matrix):
+    grid = deepcopy(matrix)
+    grid = replace_field(grid)
+
+    for item in grid:
+        print(item)
+
+
+def replace_field(matrix):
     for i in range(3):
-        field = []
         for j in range(3):
-            value = maxtrix[i][j]
+            value = matrix[i][j]
             if value == 0:
-                field.append("-")
+                matrix[i][j] = "-"
             elif value == 1:
-                field.append("X")
+                matrix[i][j] = "X"
             else:
-                field.append("O")
-        print(field)
-    print("---------------")
+                matrix[i][j] = "O"
+    return matrix
+
 
 
 def input_coords(matrix):
@@ -84,31 +107,19 @@ def tictactoe() -> None:
         if winner_check(field):
             print(f"Player {number_player} won")
             if repeat_game():
-                count_turns = 0
-                field = [
-                    [0, 0, 0],
-                    [0, 0, 0],
-                    [0, 0, 0]
-                ]
-                print_field(field)
+                tictactoe()
             else:
                 print("Goodbye. Come again")
-                return
+                exit()
 
         # Если все ячейки поля заняты
         if count_turns == 9:
             print("Fighting draw.")
             if repeat_game():
-                count_turns = 0
-                field = [
-                    [0, 0, 0],
-                    [0, 0, 0],
-                    [0, 0, 0]
-                ]
-                print_field(field)
+                tictactoe()
             else:
                 print("Goodbye. Come again")
-                return
+                exit()
 
 #Start game
 tictactoe()

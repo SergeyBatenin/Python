@@ -12,7 +12,19 @@ def remove_word(data, value):
     return " ".join(result)
 
 
+# Работает, но выглядит страшно =(
+def remove_word1(data, value):
+    return " ".join(list(filter(lambda x: x.lower().find(value) < 0, data.split())))
+
+
+# Работает, но выглядит страшно =( №2
+def remove_word2(data, value):
+    return " ".join([i for i in data.split() if i.lower().find('абв') < 0])
+
+
 text = "абвгдеж рабав копыто фабв Абкн абрыволк аБволк"
 target = "абв"
 edited_text = remove_word(text, target)
 print(edited_text)
+print(edited_text == remove_word1(text, target)) # True
+print(edited_text == remove_word2(text, target)) # True
