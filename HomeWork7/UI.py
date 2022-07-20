@@ -15,13 +15,13 @@ def start():
     elif selection == 3:
         DB.delete_user()
     elif selection == 4:
-        print(44)
+        DB.show_contact()
     elif selection == 5:
         DB.clear_db()
     elif selection == 6:
-        print(66)
+        DB.export_json()
     elif selection == 7:
-        print(77)
+        DB.import_json()
     elif selection == 8:
         print("До свидания")
         quit()

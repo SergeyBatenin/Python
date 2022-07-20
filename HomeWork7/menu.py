@@ -17,11 +17,11 @@ def view_main_menu():
 
 
 def choice_user():
-    choice_user = int(input())
-    while 1 > choice_user or choice_user > 8:
+    choice_user = input()
+    while choice_user == "" or 1 > int(choice_user) or int(choice_user) > 8:
             print("Неверный ввод.")
             view_main_menu()
-            choice_user = int(input())
+            choice_user = input()
     return choice_user
 
 
@@ -41,6 +41,7 @@ def delete_menu():
     selection = int(input())
     if selection == 1:
         choice_user = input("Введите фамилию пользователя для удаления: ")
+        return choice_user
     else:
         choice_user = input("Введите номер телефона для удаления: ")
-    return choice_user
+        return choice_user
