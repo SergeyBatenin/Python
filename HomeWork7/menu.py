@@ -1,7 +1,7 @@
-import UI
 
-def view_export_menu():
-    pass  
+
+import UI
+import DB
 
 
 def view_main_menu():
@@ -17,18 +17,18 @@ def view_main_menu():
 
 
 def choice_user():
-    choice_user = input()
-    while choice_user == "" or 1 > int(choice_user) or int(choice_user) > 8:
+    choice_user = int(input())
+    while choice_user == "" or 1 > choice_user or choice_user > 8:
             print("Неверный ввод.")
             view_main_menu()
-            choice_user = input()
+            choice_user = int(input())
     return choice_user
 
 
 def restart_or_exit():
-    print("Если хотите продолжить работу нажмите - 1\nДля выхода введите любое значение")
-    choice_user = int(input())
-    if choice_user == 1:
+    print("Если хотите продолжить работу введите - 1\nДля выхода введите любое значение")
+    choice_user = input()
+    if choice_user == "1":
         UI.start()
     else:
         quit()
@@ -45,3 +45,27 @@ def delete_menu():
     else:
         choice_user = input("Введите номер телефона для удаления: ")
         return choice_user
+
+
+def export_to():
+    print("В каком формате хотите экспорт")
+    print("Чтобы получить в json введите - 1\nЧтобы получить в txt введите -2")
+    selection = input()
+    if selection == "1":
+        DB.export_json()
+    elif selection == "2":
+        DB.export_txt()
+    else:
+        print("Неверный ввод")
+
+
+def import_from():
+    print("Из какого формата произвести импорт?")
+    print("Из формата json - 1\nИз формата txt -2")
+    selection = input()
+    if selection == "1":
+        DB.import_json()
+    elif selection == "2":
+        DB.import_txt()
+    else:
+        print("Неверный ввод")

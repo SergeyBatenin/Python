@@ -1,0 +1,56 @@
+[
+    {
+        "Lastname": "Петров",
+        "Firstname": "Петр",
+        "Phone": "123",
+        "About": "личный"
+    },
+    {
+        "Lastname": "Сидоров",
+        "Firstname": "Коля",
+        "Phone": "1234",
+        "About": "домашний"
+    },
+    {
+        "Lastname": "Зайцев",
+        "Firstname": "Саша",
+        "Phone": "12345",
+        "About": "рабочий"
+    },
+    {
+        "Lastname": "Казаков",
+        "Firstname": "Илья",
+        "Phone": "563",
+        "About": "личный"
+    },
+    {
+        "Lastname": "Ромашкин",
+        "Firstname": "Алексей",
+        "Phone": "4352",
+        "About": "домашний"
+    },
+    {
+        "Lastname": "Лисин",
+        "Firstname": "Андрей",
+        "Phone": "2356",
+        "About": "рабочий"
+    },
+    {
+        "Lastname": "Баранкин",
+        "Firstname": "Елисей",
+        "Phone": "3426",
+        "About": "личный"
+    },
+    {
+        "Lastname": "Бубликов",
+        "Firstname": "Дмитрий",
+        "Phone": "8634",
+        "About": "домашний"
+    },
+    {
+        "Lastname": "Сушкин",
+        "Firstname": "Владимир",
+        "Phone": "875325",
+        "About": "рабочий"
+    }
+]

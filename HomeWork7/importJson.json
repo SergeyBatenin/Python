@@ -1,0 +1,20 @@
+[
+    {
+        "Lastname": "Казаков",
+        "Firstname": "Илья",
+        "Phone": "563",
+        "About": "личный"
+    },
+    {
+        "Lastname": "Ромашкин",
+        "Firstname": "Алексей",
+        "Phone": "4352",
+        "About": "домашний"
+    },
+    {
+        "Lastname": "Лисин",
+        "Firstname": "Андрей",
+        "Phone": "2356",
+        "About": "рабочий"
+    }
+]

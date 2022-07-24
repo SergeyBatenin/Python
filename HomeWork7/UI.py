@@ -9,6 +9,7 @@ def start():
 
     selection = menu.choice_user()
     if selection == 1:
+        #DB.read_db()
         DB.print_db()
     elif selection == 2:        
         DB.add_user()
@@ -19,9 +20,9 @@ def start():
     elif selection == 5:
         DB.clear_db()
     elif selection == 6:
-        DB.export_json()
+        menu.export_to()
     elif selection == 7:
-        DB.import_json()
+        menu.import_from()
     elif selection == 8:
         print("До свидания")
         quit()
